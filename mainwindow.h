@@ -29,7 +29,7 @@ private slots:
 
     void on_pushButton_3_clicked();
 
-    void writeToPort(QString str);
+    //void writeToPort(QString str);
 
     void on_pushButton_4_clicked();
 

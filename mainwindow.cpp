@@ -57,19 +57,18 @@ void MainWindow::on_pushButton_2_clicked()
     serial->close();
 }
 
-void MainWindow::writeToPort(QString str)
-{
-    QByteArray arr;
-    QBuffer buff(&arr);
-    buff.open(QIODevice::ReadWrite);
-    QDataStream stream(&buff);
-    //можно ввести настройки потока. Например LittleEndian
-    stream.setByteOrder(QDataStream::LittleEndian);
-    stream << str;
+//void MainWindow::writeToPort(QString str)
+//{
+//    QByteArray arr;
+//    QBuffer buff(&arr);
+//    buff.open(QIODevice::ReadWrite);
+//    QDataStream stream(&buff);
+//    stream.setByteOrder(QDataStream::LittleEndian);
+//    stream << str;
 
-    serial->write(arr);
-    serial->waitForBytesWritten(100);
-}
+//    serial->write(arr);
+//    serial->waitForBytesWritten(100);
+//}
 
 
 
